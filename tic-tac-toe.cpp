@@ -4,10 +4,11 @@ using namespace std;
 int getPlayers() {
     int numPlayers = 0;
     
-    while (numPlayers != 1 || numPlayers != 2) {
+    while (numPlayers != 1 && numPlayers != 2) {
         std::cout << "Enter the number of players that will be playing: " << std::endl;
         std::cin >> numPlayers;
-        if (numPlayers != 1 || numPlayers != 2) {
+        
+        if (numPlayers != 1 && numPlayers != 2) {
             std::cout << "Invalid Number of Players, Try Again" << std::endl;
         }
     }
