@@ -22,5 +22,10 @@ int main() {
   std::cout << "Welcome to Tic Tac Toe!\n" << std::endl;
   num_players = GetNumPlayers();
   
+  // Temporary Fix for Choosing what Letter P1 or P2/Computer Gets
+  char player_1 = 'X';
+  char player_2 = 'O';
+  char computer = 'O';
+
   return 0;
 }
