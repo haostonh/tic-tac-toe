@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-int GetPlayers() {
+int GetNumPlayers() {
   int num_players = 0;
     
   while (num_players != 1 && num_players != 2) {
@@ -20,8 +20,7 @@ int main() {
   int num_players;
 
   std::cout << "Welcome to Tic Tac Toe!\n" << std::endl;
-  num_players = GetPlayers();
+  num_players = GetNumPlayers();
   
-
   return 0;
 }
