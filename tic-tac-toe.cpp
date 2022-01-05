@@ -16,6 +16,14 @@ int GetNumPlayers() {
   return num_players;
 }
 
+int Player1VsComputer() {
+  return 0;
+}
+
+int Player1VsPlayer2() {
+  return 0;
+}
+
 int main() {
   int num_players;
 
@@ -33,6 +41,15 @@ int main() {
   std::cout << " |  | " << std::endl;
   std::cout << "------" << std::endl;
   std::cout << " |  | " << std::endl;
-  
+
+  switch (num_players) {
+    case 1:
+      Player1VsComputer();
+    case 2:
+      Player1VsPlayer2();
+  }
+  if (num_players == 1) {
+    Player1VsComputer();
+  }
   return 0;
 }
