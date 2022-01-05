@@ -1,26 +1,26 @@
 #include<iostream>
 using namespace std;
 
-int getPlayers() {
-    int numPlayers = 0;
+int GetPlayers() {
+    int num_players = 0;
     
-    while (numPlayers != 1 && numPlayers != 2) {
+    while (num_players != 1 && num_players != 2) {
         std::cout << "Enter the number of players that will be playing: " << std::endl;
-        std::cin >> numPlayers;
-        
-        if (numPlayers != 1 && numPlayers != 2) {
+        std::cin >> num_players;
+
+        if (num_players != 1 && num_players != 2) {
             std::cout << "Invalid Number of Players, Try Again" << std::endl;
         }
     }
     
-    return numPlayers;
+    return num_players;
 }
 
 int main() {
-    int numPlayers;
+    int num_players;
 
     std::cout << "Welcome to Tic Tac Toe!\n\n" << std::endl;
-    numPlayers = getPlayers();
+    num_players = GetPlayers();
     
 
     return 0;
