@@ -47,7 +47,11 @@ int main() {
       Player1VsComputer();
     case 2:
       Player1VsPlayer2();
+    default:
+      std::cout << "Not a Valid Player Count" << std::endl;
+      return 0;
   }
+  
   if (num_players == 1) {
     Player1VsComputer();
   }
