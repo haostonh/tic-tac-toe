@@ -27,5 +27,12 @@ int main() {
   char player_2 = 'O';
   char computer = 'O';
 
+  std::cout << "Here is what the playing field will look like: " << std::endl;
+  std::cout << " |  | " << std::endl;
+  std::cout << "------" << std::endl;
+  std::cout << " |  | " << std::endl;
+  std::cout << "------" << std::endl;
+  std::cout << " |  | " << std::endl;
+  
   return 0;
 }
