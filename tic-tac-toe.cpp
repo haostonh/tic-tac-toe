@@ -19,7 +19,7 @@ int GetPlayers() {
 int main() {
   int num_players;
 
-  std::cout << "Welcome to Tic Tac Toe!\n\n" << std::endl;
+  std::cout << "Welcome to Tic Tac Toe!\n" << std::endl;
   num_players = GetPlayers();
   
 
