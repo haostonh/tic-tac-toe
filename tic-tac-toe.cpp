@@ -25,7 +25,19 @@ int Player1VsPlayer2() {
   char board[3][3] = {' '};
 
   for (int turn = 1; turn <= 9; turn++) {
-    
+    // Player Makes the Move
+    switch (player_turn) {
+      case 1:
+        std::cout << "1" << std::endl;
+      case 2:
+        std::cout << "2" << std::endl;
+      default:
+        std::cout << "Exiting the Game" << std::endl;
+        break;
+    }
+
+    // Validate if anyone has won yet
+
   }
 
   return 0;
