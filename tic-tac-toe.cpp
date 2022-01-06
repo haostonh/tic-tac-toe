@@ -21,6 +21,13 @@ int Player1VsComputer() {
 }
 
 int Player1VsPlayer2() {
+  int player_turn = 1;
+  char board[3][3] = {' '};
+
+  for (int turn = 1; turn <= 9; turn++) {
+    
+  }
+
   return 0;
 }
 
@@ -51,9 +58,6 @@ int main() {
       std::cout << "Not a Valid Player Count" << std::endl;
       return 0;
   }
-  
-  if (num_players == 1) {
-    Player1VsComputer();
-  }
+
   return 0;
 }
