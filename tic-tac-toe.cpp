@@ -16,6 +16,11 @@ int GetNumPlayers() {
   return num_players;
 }
 
+int BoardChecker() {
+
+  return 0;
+}
+
 int Player1VsComputer() {
   return 0;
 }
@@ -37,7 +42,16 @@ int Player1VsPlayer2() {
     }
 
     // Validate if anyone has won yet
-
+    switch (BoardChecker()) {
+      case 1:
+        std::cout << "Player 1 has won!" << std::endl;
+        break;
+      case 2:
+        std::cout << "Player 2 has won!" << std::endl;
+        break;
+      default:
+        continue;
+    }
   }
 
   return 0;
