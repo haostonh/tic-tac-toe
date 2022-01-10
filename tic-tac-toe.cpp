@@ -46,6 +46,15 @@ int BoardChecker(char board[3][3]) {
         }
       }
 
+      // Check upper right corner tile
+      if ((row + 1 < 3) && (row + 2 < 3) && (col - 1 >= 0) && (col - 2 >= 0)) {
+        if (((current_symbol == board[row][col - 1]) && (current_symbol == board[row][col - 2])) ||
+        ((current_symbol == board[row + 1][col]) && (current_symbol == board[row + 2][col])) ||
+        ((current_symbol == board[row + 1][col - 1]) && (current_symbol == board[row + 2][col - 2]))) {
+          three_in_a_row = 1;
+          break;
+        }
+      }
     }
 
     if (three_in_a_row == true) {
