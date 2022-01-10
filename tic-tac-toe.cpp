@@ -27,23 +27,17 @@ int BoardChecker(char board[3][3]) {
       // 1. Error Check to ensure not out of bounds
       // 2. Check for rows of 3 of same letter
 
-      // Check upper corner
+      // Check upper left corner
       if ((row + 1 < 3) && (row + 2 < 3) && (col + 1 < 3) && (col + 2 < 3)) {
-        if ((current_symbol == board[row][col + 1]) && (current_symbol == board[row][col + 2])) {
-          three_in_a_row = 1;
-          break;
-        }
-
-        if ((current_symbol == board[row + 1][col]) && (current_symbol == board[row + 2][col])) {
-          three_in_a_row = 1;
-          break;
-        }
-
-        if ((current_symbol == board[row + 1][col + 1]) && (current_symbol == board[row + 2][col + 2])) {
+        if (((current_symbol == board[row][col + 1]) && (current_symbol == board[row][col + 2])) ||
+        ((current_symbol == board[row + 1][col]) && (current_symbol == board[row + 2][col])) ||
+        ((current_symbol == board[row + 1][col + 1]) && (current_symbol == board[row + 2][col + 2]))) {
           three_in_a_row = 1;
           break;
         }
       }
+
+      
     }
 
     if (three_in_a_row == true) {
