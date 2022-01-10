@@ -16,8 +16,12 @@ int GetNumPlayers() {
   return num_players;
 }
 
-int BoardChecker() {
-
+int BoardChecker(char board[3][3]) {
+  for (int row = 0; row <= 2; row++) {
+    for (int col = 0; col <= 2; col++) {
+      
+    }
+  }
   return 0;
 }
 
@@ -42,7 +46,7 @@ int Player1VsPlayer2() {
     }
 
     // Validate if anyone has won yet
-    switch (BoardChecker()) {
+    switch (BoardChecker(board)) {
       case 1:
         std::cout << "Player 1 has won!" << std::endl;
         break;
