@@ -183,8 +183,10 @@ int main() {
   switch (num_players) {
     case 1:
       Player1VsComputer();
+      break;
     case 2:
       Player1VsPlayer2();
+      break;
     default:
       std::cout << "Not a Valid Player Count" << std::endl;
       return 0;
