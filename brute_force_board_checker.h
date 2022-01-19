@@ -1,3 +1,4 @@
+// Performs checks for three in a row on each tile
 int BoardChecker(char board[3][3]) {
   bool three_in_a_row = 0;
   char current_symbol;
