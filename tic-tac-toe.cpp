@@ -32,9 +32,11 @@ int Player1VsPlayer2() {
     switch (player_turn) {
       case 1:
         std::cout << "1" << std::endl;
+        player_turn = 2;
         break;
       case 2:
-        std::cout << "2" << std::endl;\
+        std::cout << "2" << std::endl;
+        player_turn = 1;
         break;
       default:
         std::cout << "Exiting the Game" << std::endl;
