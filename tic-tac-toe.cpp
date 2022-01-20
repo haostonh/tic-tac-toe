@@ -19,6 +19,16 @@ int GetNumPlayers() {
   return num_players;
 }
 
+void BoardPrinter(char board[3][3]) {
+  std::cout << "        X    " << std::endl;
+  std::cout << "    1   2   3" << std::endl;
+  std::cout << "  1   |   |  " << std::endl;
+  std::cout << "    ---------" << std::endl;
+  std::cout << "Y 2   |   |  " << std::endl;
+  std::cout << "    ---------" << std::endl;
+  std::cout << "  3   |   |  " << std::endl;
+}
+
 int Player1VsComputer() {
   return 0;
 }
@@ -71,11 +81,6 @@ int main() {
   char computer = 'O';
 
   std::cout << "Here is what the playing field will look like: " << std::endl;
-  std::cout << " |  | " << std::endl;
-  std::cout << "------" << std::endl;
-  std::cout << " |  | " << std::endl;
-  std::cout << "------" << std::endl;
-  std::cout << " |  | " << std::endl;
   std::cout << std::endl << std::endl;
 
   switch (num_players) {
