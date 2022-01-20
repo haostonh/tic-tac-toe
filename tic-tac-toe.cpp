@@ -23,7 +23,7 @@ int Player1VsComputer() {
   return 0;
 }
 
-int Player1VsPlayer2() {
+int Player1VsPlayer2(char player_1, char player_2) {
   int player_turn = 1;
   char board[3][3] = {' '};
 
@@ -31,11 +31,11 @@ int Player1VsPlayer2() {
     // Player Makes the Move
     switch (player_turn) {
       case 1:
-        std::cout << "1" << std::endl;
+        std::cout << "Player 1's Turn" << std::endl;
         player_turn = 2;
         break;
       case 2:
-        std::cout << "2" << std::endl;
+        std::cout << "Player 2's Turn" << std::endl;
         player_turn = 1;
         break;
       default:
@@ -76,13 +76,14 @@ int main() {
   std::cout << " |  | " << std::endl;
   std::cout << "------" << std::endl;
   std::cout << " |  | " << std::endl;
+  std::cout << std::endl << std::endl;
 
   switch (num_players) {
     case 1:
       Player1VsComputer();
       break;
     case 2:
-      Player1VsPlayer2();
+      Player1VsPlayer2(player_1, player_2);
       break;
     default:
       std::cout << "Not a Valid Player Count" << std::endl;
