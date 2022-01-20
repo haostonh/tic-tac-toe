@@ -22,20 +22,20 @@ int GetNumPlayers() {
 void BoardPrinter(char board[3][3]) {
   std::cout << "        X    " << std::endl;
   std::cout << "    1   2   3" << std::endl;
-  std::cout << "  1   |   |  " << std::endl;
+  std::cout << "  1 " << board[0][0] << " |  " << board[0][1] << " | " << board[0][2] << std::endl;
   std::cout << "    ---------" << std::endl;
-  std::cout << "Y 2   |   |  " << std::endl;
+  std::cout << "Y 2 " << board[1][0] << " |  " << board[1][1] << " | " << board[1][2] << std::endl;
   std::cout << "    ---------" << std::endl;
-  std::cout << "  3   |   |  " << std::endl;
+  std::cout << "  3 " << board[2][0] << " |  " << board[2][1] << " | " << board[2][2] << std::endl;
+  std::cout << std::endl;
 }
 
 int Player1VsComputer() {
   return 0;
 }
 
-int Player1VsPlayer2(char player_1, char player_2) {
+int Player1VsPlayer2(char player_1, char player_2, char board[3][3]) {
   int player_turn = 1;
-  char board[3][3] = {' '};
 
   for (int turn = 1; turn <= 9; turn++) {
     // Player Makes the Move
@@ -79,16 +79,18 @@ int main() {
   char player_1 = 'X';
   char player_2 = 'O';
   char computer = 'O';
+  char board[3][3] = {' '};
 
   std::cout << "Here is what the playing field will look like: " << std::endl;
-  std::cout << std::endl << std::endl;
+  BoardPrinter(board);
+  std::cout << std::endl;
 
   switch (num_players) {
     case 1:
       Player1VsComputer();
       break;
     case 2:
-      Player1VsPlayer2(player_1, player_2);
+      Player1VsPlayer2(player_1, player_2, board);
       break;
     default:
       std::cout << "Not a Valid Player Count" << std::endl;
