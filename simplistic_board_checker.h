@@ -1,4 +1,4 @@
-// Only checks for the 8 winning conditions
+// Checks for the 8 possible winning conditions
 int BoardChecker(char board[3][3]) {
   const int num_win_conditions = 8;
   const int num_tile_coords = 3;
