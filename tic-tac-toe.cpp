@@ -1,4 +1,4 @@
-#include"brute_force_board_checker.h"
+#include"simplistic_board_checker.h"
 #include<iostream>
 using namespace std;
 
