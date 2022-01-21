@@ -11,7 +11,7 @@ int BoardChecker(char board[3][3]) {
   bool three_in_a_row = false;
   char current_symbol;
 
-  for (int index = 0; num_win_conditions - 1 <= 7; index++) {
+  for (int index = 0; index <= num_win_conditions - 1; index++) {
     if (board[winning_rows[index][0][0]][winning_rows[index][0][1]] == board[winning_rows[index][1][0]][winning_rows[index][1][1]] &&
     board[winning_rows[index][1][0]][winning_rows[index][1][1]] == board[winning_rows[index][2][0]][winning_rows[index][2][1]]) {
       current_symbol = board[winning_rows[index][0][0]][winning_rows[index][0][1]];
