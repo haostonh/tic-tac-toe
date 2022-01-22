@@ -22,11 +22,11 @@ int GetNumPlayers() {
 void BoardPrinter(char board[3][3]) {
   std::cout << "        X    " << std::endl;
   std::cout << "    1   2   3" << std::endl;
-  std::cout << "  1 " << board[0][0] << " |  " << board[0][1] << " | " << board[0][2] << std::endl;
+  std::cout << "  1 " << board[0][0] << " |  " << board[0][1] << "| " << board[0][2] << std::endl;
   std::cout << "    ---------" << std::endl;
-  std::cout << "Y 2 " << board[1][0] << " |  " << board[1][1] << " | " << board[1][2] << std::endl;
+  std::cout << "Y 2 " << board[1][0] << " |  " << board[1][1] << "| " << board[1][2] << std::endl;
   std::cout << "    ---------" << std::endl;
-  std::cout << "  3 " << board[2][0] << " |  " << board[2][1] << " | " << board[2][2] << std::endl;
+  std::cout << "  3 " << board[2][0] << " |  " << board[2][1] << "| " << board[2][2] << std::endl;
   std::cout << std::endl;
 }
 
@@ -36,6 +36,7 @@ int Player1VsComputer() {
 
 int Player1VsPlayer2(char player_1, char player_2, char board[3][3]) {
   int player_turn = 1;
+  bool player_won = false;
 
   for (int turn = 1; turn <= 9; turn++) {
     // Player Makes the Move
@@ -57,12 +58,18 @@ int Player1VsPlayer2(char player_1, char player_2, char board[3][3]) {
     switch (BoardChecker(board)) {
       case 1:
         std::cout << "Player 1 has won!" << std::endl;
+        player_won = true;
         break;
       case 2:
         std::cout << "Player 2 has won!" << std::endl;
+        player_won = true;
         break;
       default:
         continue;
+    }
+
+    if (player_won) {
+      break;
     }
   }
 
@@ -79,7 +86,7 @@ int main() {
   char player_1 = 'X';
   char player_2 = 'O';
   char computer = 'O';
-  char board[3][3] = {' '};
+  char board[3][3] = {' ',' ',' ','X','X','X',' ',' ',' '};
 
   std::cout << "Here is what the playing field will look like: " << std::endl;
   BoardPrinter(board);
