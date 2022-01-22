@@ -1,5 +1,7 @@
 #include"simplistic_board_checker.h"
 #include<iostream>
+#include<algorithm>
+#include<vector>
 using namespace std;
 
 int BoardChecker(char board[3][3]);
@@ -33,10 +35,30 @@ void BoardPrinter(char board[3][3]) {
 
 void BoardChooser(char board[3][3], char player_letter) {
   int x_axis_coord, y_axis_coord;
-  std::cout << "Choose X-Axis Coordinate: ";
-  std::cin >> x_axis_coord;
-  std::cout << "Choose Y-Axis Coordinate: ";
-  std::cin >> y_axis_coord;
+  vector<int> valid_coord_nums = {1, 2, 3};
+  bool invalid_coords = true;
+
+  // Check for validility of coordinates
+  do {
+    std::cout << "Choose X-Axis Coordinate: ";
+    std::cin >> x_axis_coord;
+    std::cout << "Choose Y-Axis Coordinate: ";
+    std::cin >> y_axis_coord;
+
+    vector<int>::iterator x_axis_iter = std::find(valid_coord_nums.begin(),valid_coord_nums.end(),x_axis_coord);
+    vector<int>::iterator y_axis_iter = std::find(valid_coord_nums.begin(),valid_coord_nums.end(),y_axis_coord);
+    if (x_axis_iter != valid_coord_nums.end() && y_axis_iter != valid_coord_nums.end()){
+      invalid_coords = false;
+    } else if (x_axis_iter == valid_coord_nums.end() && y_axis_iter == valid_coord_nums.end()){
+      std::cout << std::endl << "Please enter a valid x-axis coordinate and y-axis coordinate!" << std::endl << std::endl;
+    } else if (x_axis_iter == valid_coord_nums.end() && y_axis_iter != valid_coord_nums.end()) {
+      std::cout << std::endl << "Please enter a valid x-axis coordinate!" << std::endl << std::endl;
+    } else if (x_axis_iter != valid_coord_nums.end() && y_axis_iter == valid_coord_nums.end()) {
+      std::cout << std::endl << "Please enter a valid y-axis coordinate!" << std::endl << std::endl;
+    }
+  } 
+  while (invalid_coords);
+
   board[y_axis_coord - 1][x_axis_coord - 1] = player_letter;
 }
 
