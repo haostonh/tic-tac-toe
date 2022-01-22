@@ -89,7 +89,7 @@ int main() {
   char computer = 'O';
   char board[3][3] = {' ',' ',' ',' ',' ',' ',' ',' ',' '};
 
-  std::cout << "Here is what the playing field will look like: " << std::endl;
+  std::cout << "Here is what the playing field will look like: " << std::endl << std::endl;
   BoardPrinter(board);
   std::cout << std::endl;
 
