@@ -31,6 +31,15 @@ void BoardPrinter(char board[3][3]) {
   std::cout << std::endl;
 }
 
+void BoardChooser(char board[3][3], char player_letter) {
+  int x_axis_coord, y_axis_coord;
+  std::cout << "Choose X-Axis Coordinate: ";
+  std::cin >> x_axis_coord;
+  std::cout << "Choose Y-Axis Coordinate: ";
+  std::cin >> y_axis_coord;
+  board[y_axis_coord - 1][x_axis_coord - 1] = player_letter;
+}
+
 int Player1VsComputer() {
   return 0;
 }
@@ -44,10 +53,14 @@ int Player1VsPlayer2(char player_1, char player_2, char board[3][3]) {
     switch (player_turn) {
       case 1:
         std::cout << "Player 1's Turn" << std::endl;
+        BoardChooser(board, player_1);
+        BoardPrinter(board);
         player_turn = 2;
         break;
       case 2:
         std::cout << "Player 2's Turn" << std::endl;
+        BoardChooser(board, player_2);
+        BoardPrinter(board);
         player_turn = 1;
         break;
       default:
