@@ -115,15 +115,17 @@ int Player1VsPlayer2(char player_1, char player_2, char board[3][3]) {
 
 int main() {
   int num_players;
+  char player_1, player_2, computer;
+  char board[3][3] = {' ',' ',' ',' ',' ',' ',' ',' ',' '};
 
   std::cout << "Welcome to Tic Tac Toe!\n" << std::endl;
   num_players = GetNumPlayers();
   
   // Temporary Fix for Choosing what Letter P1 or P2/Computer Gets
-  char player_1 = 'X';
-  char player_2 = 'O';
-  char computer = 'O';
-  char board[3][3] = {' ',' ',' ',' ',' ',' ',' ',' ',' '};
+  player_1 = 'X';
+  player_2 = 'O';
+  computer = 'O';
+  
 
   std::cout << "Here is what the playing field will look like: " << std::endl << std::endl;
   BoardPrinter(board);
