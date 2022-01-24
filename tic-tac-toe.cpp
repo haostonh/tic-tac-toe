@@ -63,6 +63,7 @@ void BoardChooser(char board[3][3], char player_letter) {
 }
 
 int Player1VsComputer() {
+  std::cout << "Under Construction" << std::endl;
   return 0;
 }
 
