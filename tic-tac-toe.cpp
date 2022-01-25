@@ -121,11 +121,26 @@ int main() {
   std::cout << "Welcome to Tic Tac Toe!\n" << std::endl;
   num_players = GetNumPlayers();
   
-  // Temporary Fix for Choosing what Letter P1 or P2/Computer Gets
-  player_1 = 'X';
-  player_2 = 'O';
-  computer = 'O';
-  
+  do {
+    std::cout << "Player 1: Choose X or O: ";
+    std::cin >> player_1;
+    if (player_1 != 'X' || player_1 != 'O') {
+      std::cout << "Not a Tic-Tac-Toe letter, try again" << std::endl << std::endl;
+    }
+  } while (player_1 != 'X' || player_1 != 'O');
+
+  switch (player_1) {
+    case 'X':
+      player_2, computer = 'O';
+      break;
+    case 'O':
+      player_2, computer = 'X';
+      break;
+    default:
+      std::cout << "Player 1's letter not found" << std::endl;
+      return -1;
+  }
+
 
   std::cout << "Here is what the playing field will look like: " << std::endl << std::endl;
   BoardPrinter(board);
@@ -140,7 +155,7 @@ int main() {
       break;
     default:
       std::cout << "Not a Valid Player Count" << std::endl;
-      return 0;
+      return -1;
   }
 
   return 0;
