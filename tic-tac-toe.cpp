@@ -62,7 +62,7 @@ void BoardChooser(char board[3][3], char player_letter) {
   board[y_axis_coord - 1][x_axis_coord - 1] = player_letter;
 }
 
-int Player1VsComputer() {
+int Player1VsComputer(char player_1, char computer, char board[3][3]) {
   std::cout << "Under Construction" << std::endl;
   return 0;
 }
@@ -148,7 +148,7 @@ int main() {
 
   switch (num_players) {
     case 1:
-      Player1VsComputer();
+      Player1VsComputer(player_1, computer, board);
       break;
     case 2:
       Player1VsPlayer2(player_1, player_2, board);
