@@ -65,6 +65,49 @@ void BoardChooser(char board[3][3], char player_letter) {
 int Player1VsComputer(char player_1, char computer, char board[3][3]) {
   std::cout << "Under Construction" << std::endl;
   return 0;
+
+  int player_turn = 1;
+  bool player_won = false;
+
+  for (int turn = 1; turn <= 9; turn++) {
+    // Player Makes the Move
+    switch (player_turn) {
+      case 1:
+        std::cout << "Player 1's Turn" << std::endl;
+        BoardChooser(board, player_1);
+        BoardPrinter(board);
+        player_turn = 2;
+        break;
+      case 2:
+        std::cout << "Computer's Turn" << std::endl;
+        BoardChooser(board, computer);
+        BoardPrinter(board);
+        player_turn = 1;
+        break;
+      default:
+        std::cout << "Exiting the Game" << std::endl;
+        break;
+    }
+
+    // Validate if anyone has won yet
+    switch (BoardChecker(board)) {
+      case 1:
+        std::cout << "Player 1 has won!" << std::endl;
+        player_won = true;
+        break;
+      case 2:
+        std::cout << "Computer has won!" << std::endl;
+        player_won = true;
+        break;
+      default:
+        continue;
+    }
+
+    if (player_won) {
+      break;
+    }
+  }
+  return 0;
 }
 
 int Player1VsPlayer2(char player_1, char player_2, char board[3][3]) {
