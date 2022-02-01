@@ -1,4 +1,4 @@
-#include"simplistic_board_checker.h"
+#include"board_checkers/simplistic_board_checker.h"
 #include<iostream>
 #include<algorithm>
 #include<vector>
@@ -168,10 +168,10 @@ int main() {
   do {
     std::cout << "Player 1: Choose X or O: ";
     std::cin >> player_1;
-    if (player_1 != 'X' || player_1 != 'O') {
+    if (!(player_1 == 'X' || player_1 == 'O')) {
       std::cout << "Not a Tic-Tac-Toe letter, try again" << std::endl << std::endl;
     }
-  } while (player_1 != 'X' || player_1 != 'O');
+  } while (!(player_1 == 'X' || player_1 == 'O'));
 
   switch (player_1) {
     case 'X':
