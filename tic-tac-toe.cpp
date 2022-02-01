@@ -5,6 +5,7 @@
 using namespace std;
 
 int BoardChecker(char board[3][3]);
+int ComputerBoardChooser(char board[3][3], char computer_letter);
 
 int GetNumPlayers() {
   int num_players = 0;
