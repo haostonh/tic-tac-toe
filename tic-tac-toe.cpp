@@ -10,12 +10,12 @@ int ComputerBoardChooser(char board[3][3], char computer_letter);
 int GetNumPlayers() {
   int num_players = 0;
     
-  while (num_players != 1 && num_players != 2) {
+  while (!(num_players == 1 || num_players == 2)) {
     std::cout << "Enter the number of players that will be playing: ";
     std::cin >> num_players;
     std::cout << std::endl;
 
-    if (num_players != 1 && num_players != 2) {
+    if (!(num_players == 1 || num_players == 2)) {
         std::cout << "Invalid Number of Players, Try Again" << std::endl;
     }
   }
