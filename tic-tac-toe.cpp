@@ -3,6 +3,8 @@
 #include<iostream>
 #include<algorithm>
 #include<vector>
+#include<stdlib.h>
+#include<time.h>
 using namespace std;
 
 int BoardChecker(char board[3][3]);
@@ -159,6 +161,7 @@ int main() {
   int num_players;
   char player_1, player_2, computer;
   char board[3][3] = {' ',' ',' ',' ',' ',' ',' ',' ',' '};
+  srand(time(NULL));
 
   std::cout << "Welcome to Tic Tac Toe!\n" << std::endl;
   num_players = GetNumPlayers();
