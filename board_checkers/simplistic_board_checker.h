@@ -1,5 +1,5 @@
 // Checks for the 8 possible winning conditions
-int BoardChecker(char board[3][3]) {
+int BoardChecker(char board[3][3], char player_1, char player_2_or_computer) {
   const int num_win_conditions = 8;
   const int num_tile_coords = 3;
   const int num_x_y_coords = 2;
@@ -19,9 +19,9 @@ int BoardChecker(char board[3][3]) {
     }
 
     if (three_in_a_row) {
-      if (current_symbol == 'X') {
+      if (current_symbol == player_1) {
         return 1;
-      } else if (current_symbol == 'O') {
+      } else if (current_symbol == player_2_or_computer) {
         return 2;
       }
     }

@@ -91,7 +91,7 @@ int Player1VsComputer(char board[3][3], char player_1, char computer) {
     }
 
     // Validate if anyone has won yet
-    switch (BoardChecker(board)) {
+    switch (BoardChecker(board, player_1, computer)) {
       case 1:
         std::cout << "Player 1 has won!" << std::endl;
         player_won = true;
@@ -136,7 +136,7 @@ int Player1VsPlayer2(char board[3][3], char player_1, char player_2) {
     }
 
     // Validate if anyone has won yet
-    switch (BoardChecker(board)) {
+    switch (BoardChecker(board, player_1, player_2)) {
       case 1:
         std::cout << "Player 1 has won!" << std::endl;
         player_won = true;
