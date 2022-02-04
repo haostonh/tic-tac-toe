@@ -1,4 +1,5 @@
 #include"board_checkers/simplistic_board_checker.h"
+#include"computer_move_choosers/arbitrary_move_chooser.h"
 #include<iostream>
 #include<algorithm>
 #include<vector>
@@ -78,7 +79,7 @@ int Player1VsComputer(char board[3][3], char player_1, char computer) {
         break;
       case 2:
         std::cout << "Computer's Turn" << std::endl;
-        BoardChooser(board, computer);
+        ComputerBoardChooser(board, computer);
         BoardPrinter(board);
         player_turn = 1;
         break;
