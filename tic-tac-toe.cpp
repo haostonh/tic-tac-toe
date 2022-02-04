@@ -63,7 +63,7 @@ void BoardChooser(char board[3][3], char player_letter) {
   board[y_axis_coord - 1][x_axis_coord - 1] = player_letter;
 }
 
-int Player1VsComputer(char player_1, char computer, char board[3][3]) {
+int Player1VsComputer(char board[3][3], char player_1, char computer) {
   std::cout << "Under Construction" << std::endl;
   return 0;
 
@@ -111,7 +111,7 @@ int Player1VsComputer(char player_1, char computer, char board[3][3]) {
   return 0;
 }
 
-int Player1VsPlayer2(char player_1, char player_2, char board[3][3]) {
+int Player1VsPlayer2(char board[3][3], char player_1, char player_2) {
   int player_turn = 1;
   bool player_won = false;
 
@@ -192,10 +192,10 @@ int main() {
 
   switch (num_players) {
     case 1:
-      Player1VsComputer(player_1, computer, board);
+      Player1VsComputer(board, player_1, computer);
       break;
     case 2:
-      Player1VsPlayer2(player_1, player_2, board);
+      Player1VsPlayer2(board, player_1, player_2);
       break;
     default:
       std::cout << "Not a Valid Player Count" << std::endl;
