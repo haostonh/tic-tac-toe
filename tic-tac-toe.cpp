@@ -22,15 +22,27 @@ int ComputerBoardChooser(char board[3][3], char computer_letter);
 
 int GetNumPlayers() {
   int num_players;
+  std::string str_num_players;
+  std::stringstream ss;
 
   while (!(num_players == 1 || num_players == 2)) {
     std::cout << "Enter the number of players that will be playing: ";
-    std::cin >> num_players;
-    std::cout << std::endl;
+    std::getline(std::cin,str_num_players);
+    
+    ss << str_num_players;
+    ss >> num_players;
+
+    if (ss.fail()) {
+      ss.clear();
+      ss.str("");
+      std::cout << "Not Valid Characters, Try Again" << std::endl;
+      std::cout << std::endl;
+      continue;
+    }
 
     if (!(num_players == 1 || num_players == 2)) {
         std::cout << "Invalid Number of Players, Try Again" << std::endl;
-
+        std::cout << std::endl;
     }
   }
   
