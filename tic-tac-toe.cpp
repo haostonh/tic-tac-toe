@@ -10,7 +10,11 @@
 #include"board_checkers/simplistic_board_checker.h"
 #include"computer_move_choosers/arbitrary_move_chooser.h"
 
-using namespace std;
+using std::cin;
+using std::cout;
+using std::endl;
+using std::find;
+using std::vector;
 
 int BoardChecker(char board[3][3]);
 int ComputerBoardChooser(char board[3][3], char computer_letter);
