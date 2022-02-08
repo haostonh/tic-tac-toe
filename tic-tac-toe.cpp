@@ -1,12 +1,15 @@
-#include"board_checkers/simplistic_board_checker.h"
-#include"computer_move_choosers/arbitrary_move_chooser.h"
-#include<iostream>
-#include<algorithm>
-#include<vector>
 #include<stdlib.h>
 #include<time.h>
+
+#include<algorithm>
+#include<iostream>
 #include<sstream>
 #include<string>
+#include<vector>
+
+#include"board_checkers/simplistic_board_checker.h"
+#include"computer_move_choosers/arbitrary_move_chooser.h"
+
 using namespace std;
 
 int BoardChecker(char board[3][3]);
