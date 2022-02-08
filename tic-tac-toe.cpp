@@ -14,6 +14,7 @@ using std::cin;
 using std::cout;
 using std::endl;
 using std::find;
+using std::getline;
 using std::vector;
 
 int BoardChecker(char board[3][3]);
