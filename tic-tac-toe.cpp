@@ -184,6 +184,8 @@ int main() {
   int num_players;
   char player_1, player_2, computer;
   char board[3][3] = {' ',' ',' ',' ',' ',' ',' ',' ',' '};
+  std::string str_player_letter;
+  std::stringstream ss;
   srand(time(NULL));
 
   std::cout << "Welcome to Tic Tac Toe!\n" << std::endl;
@@ -191,9 +193,15 @@ int main() {
   
   do {
     std::cout << "Player 1: Choose X or O: ";
-    std::cin >> player_1;
+    std::getline(std::cin,str_player_letter);
+    
+    ss << str_player_letter;
+    ss >> player_1;
+
     if (!(player_1 == 'X' || player_1 == 'O')) {
       std::cout << "Not a Tic-Tac-Toe letter, try again" << std::endl << std::endl;
+      ss.clear();
+      ss.str("");
     }
   } while (!(player_1 == 'X' || player_1 == 'O'));
 
@@ -209,8 +217,7 @@ int main() {
       return -1;
   }
 
-
-  std::cout << "Here is what the playing field will look like: " << std::endl << std::endl;
+  std::cout << std::endl << "Here is what the playing field will look like: " << std::endl << std::endl;
   BoardPrinter(board);
   std::cout << std::endl;
 
