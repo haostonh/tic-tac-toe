@@ -23,18 +23,18 @@ int ComputerBoardChooser(char board[3][3], char computer_letter);
 int GetNumPlayers() {
   int num_players;
   std::string str_num_players;
-  std::stringstream ss;
+  std::stringstream ss_num_players;
 
   while (!(num_players == 1 || num_players == 2)) {
     std::cout << "Enter the number of players that will be playing: ";
     std::getline(std::cin,str_num_players);
     
-    ss << str_num_players;
-    ss >> num_players;
+    ss_num_players << str_num_players;
+    ss_num_players >> num_players;
 
-    if (ss.fail()) {
-      ss.clear();
-      ss.str("");
+    if (ss_num_players.fail()) {
+      ss_num_players.clear();
+      ss_num_players.str("");
       std::cout << "Not Valid Characters, Try Again" << std::endl;
       std::cout << std::endl;
       continue;
@@ -61,9 +61,9 @@ void BoardPrinter(char board[3][3]) {
 }
 
 void BoardChooser(char board[3][3], char player_letter) {
+  bool invalid_coords = true;
   int x_axis_coord, y_axis_coord;
   vector<int> valid_coord_nums = {1, 2, 3};
-  bool invalid_coords = true;
 
   // Check for validility of coordinates
   do {
@@ -90,8 +90,8 @@ void BoardChooser(char board[3][3], char player_letter) {
 }
 
 int Player1VsComputer(char board[3][3], char player_1, char computer) {
-  int player_turn = 1;
   bool player_won = false;
+  int player_turn = 1;
 
   for (int turn = 1; turn <= 9; turn++) {
     // Player Makes the Move
@@ -135,8 +135,8 @@ int Player1VsComputer(char board[3][3], char player_1, char computer) {
 }
 
 int Player1VsPlayer2(char board[3][3], char player_1, char player_2) {
-  int player_turn = 1;
   bool player_won = false;
+  int player_turn = 1;
 
   for (int turn = 1; turn <= 9; turn++) {
     // Player Makes the Move
@@ -181,11 +181,12 @@ int Player1VsPlayer2(char board[3][3], char player_1, char player_2) {
 }
 
 int main() {
-  int num_players;
-  char player_1, player_2, computer;
   char board[3][3] = {' ',' ',' ',' ',' ',' ',' ',' ',' '};
+  char player_1, player_2, computer;
+  int num_players;
   std::string str_player_letter;
-  std::stringstream ss;
+  std::stringstream ss_player_letter;
+  
   srand(time(NULL));
 
   std::cout << "Welcome to Tic Tac Toe!\n" << std::endl;
@@ -195,13 +196,13 @@ int main() {
     std::cout << "Player 1: Choose X or O: ";
     std::getline(std::cin,str_player_letter);
     
-    ss << str_player_letter;
-    ss >> player_1;
+    ss_player_letter << str_player_letter;
+    ss_player_letter >> player_1;
 
     if (!(player_1 == 'X' || player_1 == 'O')) {
       std::cout << "Not a Tic-Tac-Toe letter, try again" << std::endl << std::endl;
-      ss.clear();
-      ss.str("");
+      ss_player_letter.clear();
+      ss_player_letter.str("");
     }
   } while (!(player_1 == 'X' || player_1 == 'O'));
 
