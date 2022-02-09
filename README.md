@@ -13,3 +13,8 @@
 - Make computer more randomized in movement, if possible
 - Develop computer to have a search algorithm
 - Gather board information into a class
+
+## Possible Future Additions
+- Undo and Redo command
+- More specific error messages for players 
+- Expand the board size to accommodate for larger than 3x3
