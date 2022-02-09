@@ -64,6 +64,8 @@ void BoardChooser(char board[3][3], char player_letter) {
   bool invalid_coords = true;
   int x_axis_coord, y_axis_coord;
   vector<int> valid_coord_nums = {1, 2, 3};
+  vector<int>::iterator x_axis_iter;
+  vector<int>::iterator y_axis_iter;
 
   // Check for validility of coordinates
   do {
@@ -72,8 +74,8 @@ void BoardChooser(char board[3][3], char player_letter) {
     std::cout << "Choose Y-Axis Coordinate: ";
     std::cin >> y_axis_coord;
 
-    vector<int>::iterator x_axis_iter = std::find(valid_coord_nums.begin(),valid_coord_nums.end(),x_axis_coord);
-    vector<int>::iterator y_axis_iter = std::find(valid_coord_nums.begin(),valid_coord_nums.end(),y_axis_coord);
+    x_axis_iter = std::find(valid_coord_nums.begin(),valid_coord_nums.end(),x_axis_coord);
+    y_axis_iter = std::find(valid_coord_nums.begin(),valid_coord_nums.end(),y_axis_coord);
     if (x_axis_iter != valid_coord_nums.end() && y_axis_iter != valid_coord_nums.end()){
       invalid_coords = false;
     } else if (x_axis_iter == valid_coord_nums.end() && y_axis_iter == valid_coord_nums.end()){
@@ -186,7 +188,7 @@ int main() {
   int num_players;
   std::string str_player_letter;
   std::stringstream ss_player_letter;
-  
+
   srand(time(NULL));
 
   std::cout << "Welcome to Tic Tac Toe!\n" << std::endl;
