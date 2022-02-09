@@ -75,6 +75,7 @@ void BoardChooser(char board[3][3], char player_letter) {
     std::cout << "Choose Y-Axis Coordinate: ";
     std::getline(std::cin,str_y_axis_coord);
 
+    // Check to ensure coordinates are in the range for integers 
     ss_x_axis_coord << str_x_axis_coord;
     ss_y_axis_coord << str_y_axis_coord;
     ss_x_axis_coord >> x_axis_coord;
