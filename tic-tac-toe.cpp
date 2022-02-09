@@ -70,9 +70,9 @@ void BoardChooser(char board[3][3], char player_letter) {
   
   // Check for validility of coordinates
   do {
-    std::cout << "Choose X-Axis Coordinate: ";
+    std::cout << "Enter X-Axis Coordinate: ";
     std::getline(std::cin,str_x_axis_coord);
-    std::cout << "Choose Y-Axis Coordinate: ";
+    std::cout << "Enter Y-Axis Coordinate: ";
     std::getline(std::cin,str_y_axis_coord);
 
     // Check to ensure coordinates are in the range for integers 
@@ -213,7 +213,7 @@ int main() {
   num_players = GetNumPlayers();
   
   do {
-    std::cout << "Player 1: Choose X or O: ";
+    std::cout << "Player 1: Enter X or O: ";
     std::getline(std::cin,str_player_letter);
     
     ss_player_letter << str_player_letter;
