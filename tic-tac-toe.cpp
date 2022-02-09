@@ -200,7 +200,8 @@ int Player1VsPlayer2(char board[3][3], char player_1, char player_2) {
 }
 
 int main() {
-  char board[3][3] = {' ',' ',' ',' ',' ',' ',' ',' ',' '};
+  const int board_size = 3;
+  char board[board_size][board_size] = {' ',' ',' ',' ',' ',' ',' ',' ',' '};
   char player_1, player_2, computer;
   int num_players;
   std::string str_player_letter;
