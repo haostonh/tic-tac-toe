@@ -1,6 +1,6 @@
 # tic-tac-toe
 
-## Simple Game of Tic-Tac-Toe Built in C++
+*Simple Game of Tic-Tac-Toe Built in C++*
 
 ## Goal
 - Build a user interface where players can interact with and view the board
