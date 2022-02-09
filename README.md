@@ -2,6 +2,12 @@
 
 *Simple Game of Tic-Tac-Toe Built in C++*
 
+## How To Play
+1. Ensure you have installed a GNU C++ complier
+2. Run `g++ tic-tac-toe.cpp` on command line of terminal
+3. Run executable `./a.out`
+4. Follow the prompts
+
 ## Goal
 - Build a user interface where players can interact with and view the board
 - Support for 1 Player or 2 Players
