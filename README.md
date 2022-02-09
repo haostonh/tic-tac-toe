@@ -8,3 +8,8 @@
 - Allow Player 1 to choose their letter
 - Use a coordinate system for players to place their letter
 - Implement error handling for user player input
+
+## Improvements
+- Make computer more randomized in movement, if possible
+- Develop computer to have a search algorithm
+- Gather board information into a class
