@@ -63,17 +63,33 @@ void BoardPrinter(char board[3][3]) {
 void BoardChooser(char board[3][3], char player_letter) {
   bool invalid_coords = true;
   int x_axis_coord, y_axis_coord;
-
+  std::string str_x_axis_coord, str_y_axis_coord;
+  std::stringstream ss_x_axis_coord, ss_y_axis_coord;
   vector<int> valid_coord_nums = {1, 2, 3};
   vector<int>::iterator x_axis_iter, y_axis_iter;
   
   // Check for validility of coordinates
   do {
     std::cout << "Choose X-Axis Coordinate: ";
-    std::cin >> x_axis_coord;
+    std::getline(std::cin,str_x_axis_coord);
     std::cout << "Choose Y-Axis Coordinate: ";
-    std::cin >> y_axis_coord;
+    std::getline(std::cin,str_y_axis_coord);
 
+    ss_x_axis_coord << str_x_axis_coord;
+    ss_y_axis_coord << str_y_axis_coord;
+    ss_x_axis_coord >> x_axis_coord;
+    ss_y_axis_coord >> y_axis_coord;
+
+    if (ss_x_axis_coord.fail() || ss_y_axis_coord.fail()) {
+      std::cout << "Not a valid x-axis coordinate or y-axis coordinate integer, try again" << std::endl << std::endl;
+      ss_x_axis_coord.clear();
+      ss_y_axis_coord.clear();
+      ss_x_axis_coord.str("");
+      ss_y_axis_coord.str("");
+      continue;
+    }
+
+    // Checking if coordinates fall out of the range
     x_axis_iter = std::find(valid_coord_nums.begin(),valid_coord_nums.end(),x_axis_coord);
     y_axis_iter = std::find(valid_coord_nums.begin(),valid_coord_nums.end(),y_axis_coord);
     if (x_axis_iter != valid_coord_nums.end() && y_axis_iter != valid_coord_nums.end()){
