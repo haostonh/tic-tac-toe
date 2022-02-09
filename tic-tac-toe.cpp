@@ -63,10 +63,10 @@ void BoardPrinter(char board[3][3]) {
 void BoardChooser(char board[3][3], char player_letter) {
   bool invalid_coords = true;
   int x_axis_coord, y_axis_coord;
-  vector<int> valid_coord_nums = {1, 2, 3};
-  vector<int>::iterator x_axis_iter;
-  vector<int>::iterator y_axis_iter;
 
+  vector<int> valid_coord_nums = {1, 2, 3};
+  vector<int>::iterator x_axis_iter, y_axis_iter;
+  
   // Check for validility of coordinates
   do {
     std::cout << "Choose X-Axis Coordinate: ";
