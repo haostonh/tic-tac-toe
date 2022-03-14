@@ -84,7 +84,7 @@ void BoardChooser(char board[3][3], char player_letter) {
     ss_y_axis_coord >> y_axis_coord;
 
     if (ss_x_axis_coord.fail() || ss_y_axis_coord.fail()) {
-      std::cout << "Not a valid x-axis coordinate or y-axis coordinate integer, try again" << std::endl << std::endl;
+      std::cout << "Not a valid x-axis coordinate or y-axis coordinate integer, try again\n" << std::endl;
       ss_x_axis_coord.clear();
       ss_y_axis_coord.clear();
       ss_x_axis_coord.str("");
