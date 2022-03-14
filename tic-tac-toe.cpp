@@ -60,11 +60,15 @@ void BoardPrinter(char board[3][3]) {
 
 void BoardChooser(char board[3][3], char player_letter) {
   bool invalid_coords = true;
-  int x_axis_coord, y_axis_coord;
-  std::string str_x_axis_coord, str_y_axis_coord;
-  std::stringstream ss_x_axis_coord, ss_y_axis_coord;
+  int x_axis_coord; 
+  int y_axis_coord;
+  std::string str_x_axis_coord;
+  std::string str_y_axis_coord;
+  std::stringstream ss_x_axis_coord;
+  std::stringstream ss_y_axis_coord;
   vector<int> valid_coord_nums = {1, 2, 3};
-  vector<int>::iterator x_axis_iter, y_axis_iter;
+  vector<int>::iterator x_axis_iter;
+  vector<int>::iterator y_axis_iter;
   
   // Check for validility of coordinates
   do {
