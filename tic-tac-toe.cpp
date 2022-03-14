@@ -211,7 +211,7 @@ int main() {
 
   srand(time(NULL));
 
-  std::cout << "Welcome to Tic Tac Toe!\n" << std::endl;
+  std::cout << "Welcome to Tic Tac Toe!\n\n";
   num_players = GetNumPlayers();
   
   do {
@@ -222,7 +222,7 @@ int main() {
     ss_player_letter >> player_1;
 
     if (!(player_1 == 'X' || player_1 == 'O')) {
-      std::cout << "Not a Tic-Tac-Toe letter, try again" << std::endl << std::endl;
+      std::cout << "Not a Tic-Tac-Toe letter, try again\n" << std::endl;
       ss_player_letter.clear();
       ss_player_letter.str("");
     }
@@ -240,9 +240,9 @@ int main() {
       return -1;
   }
 
-  std::cout << std::endl << "Here is what the playing field will look like: " << std::endl << std::endl;
+  std::cout << std::endl << "Here is what the playing field will look like: \n\n";
   BoardPrinter(board);
-  std::cout << std::endl;
+  std::cout << "\n";
 
   switch (num_players) {
     case 1:
