@@ -118,13 +118,13 @@ int Player1VsComputer(char board[3][3], char player_1, char computer) {
     // Player Makes the Move
     switch (player_turn) {
       case 1:
-        std::cout << "Player 1's Turn" << std::endl;
+        std::cout << "Player 1's Turn\n";
         BoardChooser(board, player_1);
         BoardPrinter(board);
         player_turn = 2;
         break;
       case 2:
-        std::cout << "Computer's Turn" << std::endl;
+        std::cout << "Computer's Turn\n";
         ComputerBoardChooser(board, computer);
         BoardPrinter(board);
         player_turn = 1;
