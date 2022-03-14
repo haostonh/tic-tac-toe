@@ -98,11 +98,11 @@ void BoardChooser(char board[3][3], char player_letter) {
     if (x_axis_iter != valid_coord_nums.end() && y_axis_iter != valid_coord_nums.end()){
       invalid_coords = false;
     } else if (x_axis_iter == valid_coord_nums.end() && y_axis_iter == valid_coord_nums.end()){
-      std::cout << std::endl << "Please enter a valid x-axis coordinate and y-axis coordinate!" << std::endl << std::endl;
+      std::cout << std::endl << "Please enter a valid x-axis coordinate and y-axis coordinate!\n\n";
     } else if (x_axis_iter == valid_coord_nums.end() && y_axis_iter != valid_coord_nums.end()) {
-      std::cout << std::endl << "Please enter a valid x-axis coordinate!" << std::endl << std::endl;
+      std::cout << std::endl << "Please enter a valid x-axis coordinate!\n\n";
     } else if (x_axis_iter != valid_coord_nums.end() && y_axis_iter == valid_coord_nums.end()) {
-      std::cout << std::endl << "Please enter a valid y-axis coordinate!" << std::endl << std::endl;
+      std::cout << std::endl << "Please enter a valid y-axis coordinate!\n\n";
     }
   } 
   while (invalid_coords);
