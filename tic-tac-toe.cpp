@@ -217,6 +217,7 @@ int main() {
   std::cout << "Welcome to Tic Tac Toe!\n\n";
   num_players = GetNumPlayers();
   
+  // Get Player 1's letter
   do {
     std::cout << "Player 1: Enter X or O: ";
     std::getline(std::cin,str_player_letter);
@@ -231,6 +232,7 @@ int main() {
     }
   } while (!(player_1 == 'X' || player_1 == 'O'));
 
+  // Get Player 2's or Computer's letter
   switch (player_1) {
     case 'X':
       player_2, computer = 'O';
