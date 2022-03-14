@@ -41,8 +41,8 @@ int GetNumPlayers() {
     }
 
     if (!(num_players == 1 || num_players == 2)) {
-        std::cout << "Invalid Number of Players, Try Again" << std::endl;
-        std::cout << std::endl;
+      std::cout << "Invalid Number of Players, Try Again" << std::endl;
+      std::cout << std::endl;
     }
   }
   
