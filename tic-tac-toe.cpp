@@ -40,7 +40,10 @@ int GetNumPlayers() {
     }
 
     if (!(num_players == 1 || num_players == 2)) {
+      ss_num_players.clear();
+      ss_num_players.str("");
       std::cout << "Invalid Number of Players, Try Again\n" << std::endl;
+      continue;
     }
   }
   
