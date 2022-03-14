@@ -2,6 +2,8 @@
 int BoardChecker(char board[3][3], char player_1, char player_2_or_computer) {
   bool three_in_a_row = false;
   char current_symbol;
+
+  // Using 3-D array to store winning conditions
   const int num_tile_coords = 3;
   const int num_win_conditions = 8;
   const int num_x_y_coords = 2;
