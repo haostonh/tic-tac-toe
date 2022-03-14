@@ -35,14 +35,12 @@ int GetNumPlayers() {
     if (ss_num_players.fail()) {
       ss_num_players.clear();
       ss_num_players.str("");
-      std::cout << "Not Valid Characters, Try Again" << std::endl;
-      std::cout << std::endl;
+      std::cout << "Not Valid Characters, Try Again\n" << std::endl;
       continue;
     }
 
     if (!(num_players == 1 || num_players == 2)) {
-      std::cout << "Invalid Number of Players, Try Again" << std::endl;
-      std::cout << std::endl;
+      std::cout << "Invalid Number of Players, Try Again\n" << std::endl;
     }
   }
   
