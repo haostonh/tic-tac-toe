@@ -21,7 +21,7 @@ int BoardChecker(char board[3][3]);
 void ComputerBoardChooser(char board[3][3], char computer_letter);
 
 int GetNumPlayers() {
-  int num_players;
+  int num_players = 0;
   std::string str_num_players;
   std::stringstream ss_num_players;
 
