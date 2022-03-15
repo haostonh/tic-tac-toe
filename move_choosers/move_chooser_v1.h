@@ -36,25 +36,25 @@ void BoardChooser(char board[3][3], char player_letter) {
 
     if (ss_x_axis_coord.fail() || ss_y_axis_coord.fail()) {
       std::cout << "Not a valid x-axis coordinate or y-axis coordinate integer, try again\n" << std::endl;
-      ss_x_axis_coord.clear();
-      ss_y_axis_coord.clear();
-      ss_x_axis_coord.str("");
-      ss_y_axis_coord.str("");
-      continue;
+    } else {
+      // Checking if coordinates fall out of the range
+      x_axis_iter = std::find(valid_coord_nums.begin(),valid_coord_nums.end(),x_axis_coord);
+      y_axis_iter = std::find(valid_coord_nums.begin(),valid_coord_nums.end(),y_axis_coord);
+      if (x_axis_iter != valid_coord_nums.end() && y_axis_iter != valid_coord_nums.end()){
+        invalid_coords = false;
+      } else if (x_axis_iter == valid_coord_nums.end() && y_axis_iter == valid_coord_nums.end()){
+        std::cout << std::endl << "Please enter a valid x-axis coordinate and y-axis coordinate!\n\n";
+      } else if (x_axis_iter == valid_coord_nums.end() && y_axis_iter != valid_coord_nums.end()) {
+        std::cout << std::endl << "Please enter a valid x-axis coordinate!\n\n";
+      } else if (x_axis_iter != valid_coord_nums.end() && y_axis_iter == valid_coord_nums.end()) {
+        std::cout << std::endl << "Please enter a valid y-axis coordinate!\n\n";
+      }
     }
-
-    // Checking if coordinates fall out of the range
-    x_axis_iter = std::find(valid_coord_nums.begin(),valid_coord_nums.end(),x_axis_coord);
-    y_axis_iter = std::find(valid_coord_nums.begin(),valid_coord_nums.end(),y_axis_coord);
-    if (x_axis_iter != valid_coord_nums.end() && y_axis_iter != valid_coord_nums.end()){
-      invalid_coords = false;
-    } else if (x_axis_iter == valid_coord_nums.end() && y_axis_iter == valid_coord_nums.end()){
-      std::cout << std::endl << "Please enter a valid x-axis coordinate and y-axis coordinate!\n\n";
-    } else if (x_axis_iter == valid_coord_nums.end() && y_axis_iter != valid_coord_nums.end()) {
-      std::cout << std::endl << "Please enter a valid x-axis coordinate!\n\n";
-    } else if (x_axis_iter != valid_coord_nums.end() && y_axis_iter == valid_coord_nums.end()) {
-      std::cout << std::endl << "Please enter a valid y-axis coordinate!\n\n";
-    }
+    
+    ss_x_axis_coord.clear();
+    ss_y_axis_coord.clear();
+    ss_x_axis_coord.str("");
+    ss_y_axis_coord.str("");
   } 
   while (invalid_coords);
 
