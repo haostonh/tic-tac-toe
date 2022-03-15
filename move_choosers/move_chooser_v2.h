@@ -6,7 +6,7 @@
 #include<string>
 #include<regex>
 
-void board_chooser(char board[3][3], char player_letter) {
+void BoardChooser(char board[3][3], char player_letter) {
   bool invalid_coords = true;
   int x_axis_coord; 
   int y_axis_coord;
