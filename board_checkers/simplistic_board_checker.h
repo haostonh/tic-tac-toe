@@ -1,3 +1,6 @@
+#ifndef BOARD_CHECKERS_SIMPLISTIC_BOARD_CHECKER_H
+#define BOARD_CHECKERS_SIMPLISTIC_BOARD_CHECKER_H
+
 // Checks for the 8 possible winning conditions
 int BoardChecker(char board[3][3], char player_1, char player_2_or_computer) {
   bool three_in_a_row = false;
@@ -31,3 +34,5 @@ int BoardChecker(char board[3][3], char player_1, char player_2_or_computer) {
   
   return 0;
 }
+
+#endif BOARD_CHECKERS_SIMPLISTIC_BOARD_CHECKER_H
