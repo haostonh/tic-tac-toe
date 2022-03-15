@@ -1,3 +1,6 @@
+#ifndef MOVE_CHOOSERS_MOVE_CHOOSER_V1_H
+#define MOVE_CHOOSERS_MOVE_CHOOSER_V1_H
+
 #include<algorithm>
 #include<iostream>
 #include<sstream>
@@ -57,3 +60,5 @@ void BoardChooser(char board[3][3], char player_letter) {
 
   board[y_axis_coord - 1][x_axis_coord - 1] = player_letter;
 }
+
+#endif MOVE_CHOOSERS_MOVE_CHOOSER_V1_H
