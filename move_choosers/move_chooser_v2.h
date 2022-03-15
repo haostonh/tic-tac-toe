@@ -30,11 +30,6 @@ void BoardChooser(char board[3][3], char player_letter) {
 
     if (ss_x_axis_coord.fail() || ss_y_axis_coord.fail()) {
       std::cout << "Not a valid x-axis coordinate or y-axis coordinate integer, try again\n" << std::endl;
-      ss_x_axis_coord.clear();
-      ss_y_axis_coord.clear();
-      ss_x_axis_coord.str("");
-      ss_y_axis_coord.str("");
-      continue;
     } else if (std::regex_match(str_x_axis_coord, std::regex("[1-3]")) && std::regex_match(str_y_axis_coord, std::regex("[1-3]"))) {
       invalid_coords = false;
     } else {
