@@ -1,3 +1,6 @@
+#ifndef BOARD_CHECKERS_BRUTE_FORCE_BOARD_CHECKER_H
+#define BOARD_CHECKERS_BRUTE_FORCE_BOARD_CHECKER_H
+
 // Performs checks for three in a row on each tile
 int BoardChecker(char board[3][3]) {
   bool three_in_a_row = 0;
@@ -108,3 +111,5 @@ int BoardChecker(char board[3][3]) {
   }
   return 0;
 }
+
+#endif BOARD_CHECKERS_BRUTE_FORCE_BOARD_CHECKER_H
