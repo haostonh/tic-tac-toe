@@ -35,4 +35,4 @@ int BoardChecker(char board[3][3], char player_1, char player_2_or_computer) {
   return 0;
 }
 
-#endif BOARD_CHECKERS_SIMPLISTIC_BOARD_CHECKER_H
+#endif // BOARD_CHECKERS_SIMPLISTIC_BOARD_CHECKER_H

@@ -19,4 +19,4 @@ void ComputerBoardChooser(char board[3][3], char computer_letter) {
   while (invalid_coordinate);
 }
 
-#endif COMPUTER_MOVE_CHOOSERS_ARBITRARY_MOVE_CHOOSER_H
+#endif // COMPUTER_MOVE_CHOOSERS_ARBITRARY_MOVE_CHOOSER_H
