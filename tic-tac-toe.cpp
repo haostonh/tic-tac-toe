@@ -9,7 +9,7 @@
 
 #include"board_checkers/simplistic_board_checker.h"
 #include"computer_move_choosers/arbitrary_move_chooser.h"
-#include"move_choosers/move_chooser_v1.h"
+#include"move_choosers/move_chooser_v2.h"
 
 using std::cin;
 using std::cout;
