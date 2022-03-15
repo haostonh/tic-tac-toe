@@ -2,7 +2,7 @@
 #define BOARD_CHECKERS_BRUTE_FORCE_BOARD_CHECKER_H
 
 // Performs checks for three in a row on each tile
-int BoardChecker(char board[3][3]) {
+int BoardChecker(char board[3][3], char player_1, char player_2_or_computer) {
   bool three_in_a_row = 0;
   char current_symbol;
 
@@ -102,9 +102,9 @@ int BoardChecker(char board[3][3]) {
     }
 
     if (three_in_a_row == true) {
-      if (current_symbol == 'X') {
+      if (current_symbol == player_1) {
         return 1;
-      } else if (current_symbol == 'O') {
+      } else if (current_symbol == player_2_or_computer) {
         return 2;
       }
     }
