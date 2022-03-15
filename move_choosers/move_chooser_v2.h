@@ -2,9 +2,9 @@
 #define MOVE_CHOOSERS_MOVE_CHOOSER_V2_H_
 
 #include<iostream>
+#include<regex>
 #include<sstream>
 #include<string>
-#include<regex>
 
 void BoardChooser(char board[3][3], char player_letter) {
   bool invalid_coords = true;
