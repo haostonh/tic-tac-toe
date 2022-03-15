@@ -38,12 +38,15 @@ void BoardChooser(char board[3][3], char player_letter) {
     }
 
     if (std::regex_match(str_x_axis_coord, std::regex("[1-3]")) && std::regex_match(str_y_axis_coord, std::regex("[1-3]"))) {
-      ss_x_axis_coord.clear();
-      ss_y_axis_coord.clear();
-      ss_x_axis_coord.str("");
-      ss_y_axis_coord.str("");
       invalid_coords = false;
+    } else {
+      std::cout << "Coordinates fall out of the range of the board, try again\n" << std::endl;
     }
+
+    ss_x_axis_coord.clear();
+    ss_y_axis_coord.clear();
+    ss_x_axis_coord.str("");
+    ss_y_axis_coord.str("");
   } 
   while (invalid_coords);
 
