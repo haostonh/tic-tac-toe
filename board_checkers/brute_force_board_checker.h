@@ -1,5 +1,5 @@
-#ifndef BOARD_CHECKERS_BRUTE_FORCE_BOARD_CHECKER_H
-#define BOARD_CHECKERS_BRUTE_FORCE_BOARD_CHECKER_H
+#ifndef BOARD_CHECKERS_BRUTE_FORCE_BOARD_CHECKER_H_
+#define BOARD_CHECKERS_BRUTE_FORCE_BOARD_CHECKER_H_
 
 // Performs checks for three in a row on each tile
 int BoardChecker(char board[3][3], char player_1, char player_2_or_computer) {
@@ -112,4 +112,4 @@ int BoardChecker(char board[3][3], char player_1, char player_2_or_computer) {
   return 0;
 }
 
-#endif // BOARD_CHECKERS_BRUTE_FORCE_BOARD_CHECKER_H
+#endif // BOARD_CHECKERS_BRUTE_FORCE_BOARD_CHECKER_H_
