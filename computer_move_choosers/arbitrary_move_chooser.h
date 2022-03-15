@@ -1,3 +1,6 @@
+#ifndef COMPUTER_MOVE_CHOOSERS_ARBITRARY_MOVE_CHOOSER_H
+#define COMPUTER_MOVE_CHOOSERS_ARBITRARY_MOVE_CHOOSER_H
+
 #include<random>
 
 void ComputerBoardChooser(char board[3][3], char computer_letter) {
@@ -15,3 +18,5 @@ void ComputerBoardChooser(char board[3][3], char computer_letter) {
   } 
   while (invalid_coordinate);
 }
+
+#endif COMPUTER_MOVE_CHOOSERS_ARBITRARY_MOVE_CHOOSER_H
