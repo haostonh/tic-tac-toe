@@ -4,9 +4,10 @@
 
 ## How To Play
 1. Ensure you have installed a GNU C++ complier
-2. Run `g++ tic-tac-toe.cpp` on command line of terminal
-3. Run executable `./a.out`
+2. Run `make` on command line of terminal
+3. Run executable `./tic-tac-toe`
 4. Follow the prompts
+5. To remove executable, run `make clean`
 
 ## Goal
 - Build a user interface where players can interact with and view the board
