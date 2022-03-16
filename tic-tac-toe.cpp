@@ -186,10 +186,12 @@ int main() {
   // Get Player 2's or Computer's letter
   switch (player_1) {
     case 'X':
-      player_2, computer = 'O';
+      player_2 = 'O';
+      computer = 'O';
       break;
     case 'O':
-      player_2, computer = 'X';
+      player_2 = 'X';
+      computer = 'X';
       break;
     default:
       std::cout << "Player 1's letter not found" << std::endl;
